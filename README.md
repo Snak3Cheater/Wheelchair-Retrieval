@@ -137,24 +137,34 @@ Black ($37.99)
 Totaling: $723.32
 
 5. Code Design/Breakdown
+
 The basic functionality of the Handicap Helper can be broken down into four different sections:
-● Camera based object detection
-● Autonomous driving and object avoidance using ultrasonic sensors
-● Manual movement using high torque DC gear motors
-● Wheelchair retrieval using and custom hook and servo motor combo
+
+    ● Camera based object detection
+
+    ● Autonomous driving and object avoidance using ultrasonic sensors
+
+    ● Manual movement using high torque DC gear motors
+
+    ● Wheelchair retrieval using and custom hook and servo motor combo
+
 All components will be fed into our microcontroller and Raspberry Pi in addition to the user
 giving their own input using our custom GUI. The GUI will allow the user to enable different
 functions and give the user feedback on the robot’s current status.
 The robot can be set to different settings which can be toggled by the user. The functions are
 located on the GUI and can be clicked to enable or disable the function. Each of the functions
 have the following features:
+
 Manual Mode
+
 In manual mode the user can take control of the robot directly. The robot can be
 controlled with the following buttons on the GUI. The WASD keys control the movement of the
 robot such as going forward, reversing and turning. The ZX keys control the function of the
 retractable hooks where you can retract or clamp the hooks. Combining these the user can drive
 the robot around and use the clamping buttons to get the chair manually and bring it back.
+
 Search Mode and Search Person
+
 In Search Mode the robot will actively look for the wheelchair using the front mounted
 camera. The object detection software will be running and will determine which side of the
 wheelchair the robot is facing. From there the robot will try to position itself towards the front of
@@ -163,11 +173,14 @@ centered on the camera or not.
 Search Person mode operates under the same principles of the search mode except now
 the robot is looking for a hand gesture from the person. Once a hand gesture is found on the
 camera the robot will go towards it.
+
 Explore Mode
+
 In explore mode the robot will just randomly wander around its location until other
 functions are activated. The robot will actively explore and avoid obstacles along the way.
 
 6. Chassis Design
+
 The Handicap Helper was designed to be sized universally for all wheelchairs (between
 45-60lb). The main body of the chassis, the retractable hooks, and the main support beams are all
 made from aluminum. Aluminum is a cheap and light material and has the strength to withstand
@@ -186,9 +199,11 @@ Wood became a cheap and alternative solution to other weighted materials as we d
 make the robot too heavy with metals. The circuitry will sit on top of the wooden base where it
 can be glued and held in place. The bottom diagrams show the different sides of the robot. From
 left to right the views are the top view, side view and front view.
+
 7. Pics of robot
 
 9. Conclusions
+
 Although there are smart automatic wheelchairs, there are none that can be called to the
 user when the user is away from the chair. We seek to create a solution for the user to be able to
 call the wheelchair to themselves both manually and automatically. The bot we are making is
@@ -200,6 +215,7 @@ automatic chair or for people that already have a manual wheelchair and just nee
 functionality of calling their chair to themselves.
 
 9. Future Improvements
+
 In terms of future improvements we would like to have upgraded to stronger gear motors
 to improve on retrieval speed and accuracy. We would also like to use a better camera
 preferably one that would rotate in order to improve on object detection and require less turning.
@@ -211,13 +227,19 @@ movement controls that would allow for better obstacle avoidance and precise tur
 creating a chassis that would not require that wide of turns.
 
 10. References
+
 Ultrasonic Sensor MB1200 Max Sonar DataSheet
-• https://www.maxbotix.com/documents/XL-MaxSonar-EZ_Datasheet.pdf
+
+    • https://www.maxbotix.com/documents/XL-MaxSonar-EZ_Datasheet.pdf
+
 Raspberry Pi 4 Model B 8Gb
-• https://www.raspberrypi.org/documentation/hardware/raspberrypi/bcm2711/rpi_D
-ATA_2711_1p0_preliminary.pdf
+
+    • https://www.raspberrypi.org/documentation/hardware/raspberrypi/bcm2711/rpi_DATA_2711_1p0_preliminary.pdf
+
 Servo Motor MG996R
-• https://components101.com/asset/sites/default/files/component_datasheet/MG996
-R-Datasheet.pdf
+
+    • https://components101.com/asset/sites/default/files/component_datasheet/MG996R-Datasheet.pdf
+
 Tensor Flow Object Detection Software
-• https://www.tensorflow.org/lite/examples/object_detection/overview
+
+    • https://www.tensorflow.org/lite/examples/object_detection/overview
